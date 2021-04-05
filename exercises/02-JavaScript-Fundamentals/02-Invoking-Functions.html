@@ -39,11 +39,18 @@
 
     <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
     <script id="candidateCode">
-        getCar(getDreamCar);
+
+        // Invoke getCar function 2 times
+        getCar(getDreamCar(1));
 
         getCar(myTruck);
 
+        // Invoke function getCar and assign return values
         getCar(firstCar, anotherCar);
+
+        function getCar() {
+            return firstCar
+        }
 
         function getYear() {
             return 2021;
