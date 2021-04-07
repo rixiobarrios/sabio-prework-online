@@ -41,29 +41,34 @@
     <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻-->
     <script id="candidateCode">
         // Define 6 functions
-        function Person() {
-            return {};
+        // Returning a person object with firstName and lastName
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
 
-        function getAge() {
-            return {};
+        // Use with new keyword also returning an object with firstName and lastName    
+        var person = new Person('George', 'Lopez');
+
+        function getAge(person) {
+            return person.age;
         }
 
         function getPerson() {
             return { firstName: "Bob", lastName: "Villa"};
             }
-  
 
-        function setAge() {
-            return {};
+
+        function setAge(person) {
+            person.age = 21;
         } 
         
-        function setLocation() {
-                return {};
+        function setLocation(singlePerson, city) {
+                singlePerson.location = city;
             }  
             
-        function transportPerson() {
-                return {};
+        function transportPerson(person) {
+                setLocation(person, "LA");
             }        
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
