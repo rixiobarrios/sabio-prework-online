@@ -53,6 +53,27 @@
 
     <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
     <script id="candidateCode">
+
+        // Function declaration named startUp with no parameters
+        function startUp() {
+            changeHeading()
+        }
+
+        // Function declaration named changeHeading
+        function changeHeading() {
+            var Element = document.getElementsByClassName("mt-0");
+            Element[0].innerHTML = "Changed On StartUp";
+        }
+        
+        // document.getElementsByClassName('mt-0').innerHTML = "Changed On StartUp"
+        // document.querySelector('h5').innerHTML = "Changed On StartUp"
+
+        // var headingElement = document.querySelector(".mt-0");
+        // headingElement.textContent = "Changed On StartUp";
+
+            // $(".mt-0").html(function () {
+            //         return "Changed On StartUp";
+            //     });
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
 </body>
