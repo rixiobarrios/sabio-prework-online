@@ -44,7 +44,9 @@
         }
 
         var mailCarrier = function(letter) {
-            return letter;
+            var arr = [];
+            arr.push(letter);
+            usps(arr, "slow")
         }
 
         var fedEx = function(letters, boxes, payment) {
