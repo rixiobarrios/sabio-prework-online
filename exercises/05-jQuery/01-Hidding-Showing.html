@@ -74,23 +74,23 @@
 
     // Function declaration called startUp    
     function startUp() {
-        hideFirstCard
-        makeInvisible
-        hideLastCard
+        hideFirstCard();
+        makeInvisible();
+        hideLastCard();
     };
     // Function expression called hideFirstCard
     var hideFirstCard = function() {
-        $(".card-body").css("display", "none");
+        $("card, .bg-primary").first().hide()
     }
 
     // Function expression called makeInvisible
     var makeInvisible = function() {
-        $(".card-body").hide()
+        $("card, .inv").css("visibility", "hidden");
     }
 
     // Function expression called hideLastCard
     var hideLastCard = function() {
-        $(".card-body").addClass("d-none")
+        $("card, .bg-primary").last().addClass("d-none")
     }
 
     // $('.card-body').hide();
