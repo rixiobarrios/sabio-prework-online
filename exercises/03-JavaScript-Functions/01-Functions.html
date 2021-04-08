@@ -40,25 +40,30 @@
     <script id="candidateCode">
 
         var usps = function(letters, speed) {
-            return letters * speed;
-        }
+            if (letters.length > 5) {
+                return fedEx(letters, null, 1000)
+            } else {
+                return usps;
+                }
+
+            }
 
         var mailCarrier = function(letter) {
-            var arr = [];
-            arr.push(letter);
-            usps(arr, "slow")
+            var arrOfLetters = [];
+            arrOfLetters.push(letter);
+            usps(arrOfLetters, "slow");
         }
 
         var fedEx = function(letters, boxes, payment) {
-            return (letters * boxes) * payment;
+            if(!payment) {
+                return "Payment Required";
+            } else if(payment < 1000) {
+                return "Payment Insufficient";
+            } else {
+                (payment === 1000)
+                return "OK";
+            }
         }
-
-        // function usps(letters, speed) {
-        //     return letters * speed;
-        // }
-
-
-
 
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
