@@ -75,11 +75,23 @@
     // Function declaration called startUp    
     function startUp() {
         hideFirstCard
+        makeInvisible
+        hideLastCard
     };
     // Function expression called hideFirstCard
-    const hideFirstCard = function () {
+    var hideFirstCard = function() {
         $(".card-body").css("display", "none");
-    };
+    }
+
+    // Function expression called makeInvisible
+    var makeInvisible = function() {
+        $(".card-body").hide()
+    }
+
+    // Function expression called hideLastCard
+    var hideLastCard = function() {
+        $(".card-body").addClass("d-none")
+    }
 
     // $('.card-body').hide();
 
@@ -87,7 +99,7 @@
 
     // $(document).ready(function () {
     //         $(".card-body").hide();
-    
+
     //  $(function () {
     //         $('.card-body').removeClass('hidden');
     //     });
