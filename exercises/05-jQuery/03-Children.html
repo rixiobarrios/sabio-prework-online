@@ -132,15 +132,15 @@
     <script id="candidateCode">
 
     function removeAllChildren(querySelector) {
-        return {};
+        $(querySelector).empty()
     }    
 
     function addChild(querySelector, elementOrjQueryObject) {
-        return {};
+        $(querySelector).append(elementOrjQueryObject);
     }  
     
     function removeElement(querySelector) {
-        return {};
+        // $(querySelector).remove();
     }
 
 
