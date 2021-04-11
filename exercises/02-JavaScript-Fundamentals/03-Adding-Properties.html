@@ -41,18 +41,20 @@
 
         // Variable named myCar
         var myCar = {
-                make: "Honda"
-                , model: "Accord"
-                , year: 2019
+                make: "Kia"
+                , model: "Seltos"
+                , year: 2021
                 , transmission: "Automatic"
             }
 
         // Variable named aCar    
-        var aCar = {} 
+        var aCar = {};
 
         // Function name getCar with one object
-        function getCar(year) {
-            return 2019
+        function getCar() {
+            return {
+                year: 2021
+            }
         }
 
         // Function named addTransmission
@@ -64,17 +66,17 @@
         // Function named addMakeModel
         function addMakeModel() {
             aCar.make = "Tesla";
-            aCar.model = 3
+            aCar.model = 3;
         }
 
         // Function named getTransmission
         function getTransmission() {
-            return aCar.transmission // <-- Dot notation to access the property
+            return aCar.transmission; // <-- Dot notation to access the property
         }
 
         // Function named getModel
         function getModel() {
-            return aCar.model
+            return aCar.model;
         }
 
 
