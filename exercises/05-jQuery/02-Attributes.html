@@ -145,19 +145,10 @@
         var removeColors = function() {
             var afterLoop = $('.after-loop .row');
             
-            // var templates = afterLoop.find('a.card-templates'); // Find element
-            // templates.addClass("card-templates-remove"); // Add tag to element to find it later
-            // templates.removeClass('card-templates'); // Remove element
-            
-            // var templatesAgain = templates.addClass("card-templates-remove");
-            // templatesAgain.removeClass("card-templates");
-            
             afterLoop.find('.card-templates').addClass('card-templates-removed').removeClass('card-templates')
             afterLoop.find('.card-snippets').addClass('card-snippets-removed').removeClass('card-snippets')
             afterLoop.find('.card-guides').addClass('card-guides-removed').removeClass('card-guides')
         }
-        
-        // $('a').removeClass('card-templates card-snippets card-guides');
 
         // Function expression named toggleColors
         var toggleColors = function() {
@@ -166,16 +157,12 @@
             afterLoop.find('.card-snippets-removed').toggleClass('card-snippets')
             afterLoop.find('.card-guides-removed').toggleClass('card-guides')
         }
-        
-        // $('a').toggleClass('card-templates card-snippets card-guides');
-
 
         // Function expression named addClass
         var addClass = function(querySelector, className) {
             $(querySelector).addClass(className)
         }
         
-        // $("a").addClass('card-themes');
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
 </body>
