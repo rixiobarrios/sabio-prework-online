@@ -133,15 +133,21 @@
 
     function removeAllChildren(querySelector) {
         $(querySelector).empty()
-    }    
+    }  
+    
+    // $(querySelector).children().remove()
 
     function addChild(querySelector, elementOrjQueryObject) {
         $(querySelector).append(elementOrjQueryObject);
     }  
     
     function removeElement(querySelector) {
-        // $(querySelector).remove();
+        return $(querySelector).remove();
+        // var removedElements = $(querySelector).remove();
+        //     return removedElements;
     }
+
+    
 
 
     </script>
