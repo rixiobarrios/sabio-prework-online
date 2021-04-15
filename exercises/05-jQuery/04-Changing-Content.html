@@ -121,15 +121,13 @@
          var urlOfImage = "https://cdn.pixabay.com/photo/2017/03/26/12/13/countryside-2175353_1280.jpg" 
          changeHeadLineImg(urlOfImage)
          addLinkButton()
-        //  setTagLine()
+         setTagLine()
      }
 
      // Function named changeHeadLineImg
      function changeHeadLineImg(imgUrl) {
         $('.img-fluid').attr("src", imgUrl);
-        console.log(imgUrl)
     }
-    // $('.img-fluid').attr('src', imgUrl)
 
      // Function expression named addLinkButton
      var addLinkButton = function() {
@@ -143,11 +141,16 @@
 
      // Function named setTagLine
      function setTagLine(tagText) {
-        //  $('.tag-line').attr("<code>text<code>")
-         $('.tag-line').attr(tagText) 
-        //  console.log(tagText)   
-     }
+        //  $(".tag-line").replaceWith("<h1>Sabio Tag Line</h1>");
+        $(".tag-line").html(tagText);
+        // $(".tag-line").replaceWith(tagText);
+        // $(".tag-line").text(function(index, tagText){
+        // });
+        }
 
+        //  console.log(tagText)
+    
+        
 
 
     </script>
