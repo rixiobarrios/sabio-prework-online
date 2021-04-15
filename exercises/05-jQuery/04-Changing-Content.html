@@ -118,29 +118,34 @@
      
      // Function named startUp
      function startUp() {
-         changeHeadLineImg()
+         var urlOfImage = "https://cdn.pixabay.com/photo/2017/03/26/12/13/countryside-2175353_1280.jpg" 
+         changeHeadLineImg(urlOfImage)
          addLinkButton()
-         setTagLine()
+        //  setTagLine()
      }
 
      // Function named changeHeadLineImg
-     function changeHeadLineImg() {
-         return {};
-     }
+     function changeHeadLineImg(imgUrl) {
+        $('.img-fluid').attr("src", imgUrl);
+        console.log(imgUrl)
+    }
+    // $('.img-fluid').attr('src', imgUrl)
 
      // Function expression named addLinkButton
      var addLinkButton = function() {
-         return {};
+        //  $('.call-to-action a').attr("href", "www.w3resource.com/mysql/mysql-tutorials.php");
      }
 
      // Function expression named addHTMLToFirstCard
      var addHTMLToFirstCard = function() {
-         return {};
+        //  $("car-body").first().append("<p>Some appended text.</p>");
      }
 
      // Function named setTagLine
-     function setTagLine() {
-         return {};
+     function setTagLine(tagText) {
+        //  $('.tag-line').attr("<code>text<code>")
+         $('.tag-line').attr(tagText) 
+        //  console.log(tagText)   
      }
 
 
