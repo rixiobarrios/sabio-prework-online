@@ -118,8 +118,9 @@
      
      // Function named startUp
      function startUp() {
-         var urlOfImage = "https://cdn.pixabay.com/photo/2017/03/26/12/13/countryside-2175353_1280.jpg" 
-         changeHeadLineImg(urlOfImage)
+        //  var urlOfImage = "https://cdn.pixabay.com/photo/2017/03/26/12/13/countryside-2175353_1280.jpg" 
+        //  changeHeadLineImg(urlOfImage)
+         changeHeadLineImg("https://i.imgur.com/cPIkVX9.jpg")
          addLinkButton()
          setTagLine("Any string")
      }
@@ -131,6 +132,8 @@
 
      // Function expression named addLinkButton
      var addLinkButton = function() {
+         $(".call-to-action").html(`<a class="btn btn-primary" style="color: white">Click Here</a>`)
+         // Remove children first?
         //  $("a").attr(".call-to-action").html("href", "#");
         // $("p").add("a").addClass("btn btn - primary").html("href", imgUrl);
         //  $("p").add("div").addClass("widget");
