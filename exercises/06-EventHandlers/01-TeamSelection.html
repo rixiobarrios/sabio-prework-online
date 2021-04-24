@@ -118,13 +118,21 @@
         // Function named wireUpHandlers
         function wireUpHandlers() {
             onAlphaClicked()
+            onChildClicked()
+        }
+
+        function startUp() {
+
         }
 
         // Function name onAlphaClicked
         function onAlphaClicked(e) {
-            e.preventDefault()
-            console.log('alpha')
-        }
+            $('btn').on('click', function() {
+                console.log('alpha')
+            });
+        };
+
+
 
         // $('button #alpha').on('click', )
         // $('#alpha').click(function (e)
@@ -142,7 +150,7 @@
             }
 
         // Function named showMessage
-        function showMessage(elementld, isSelected) {
+        function showMessage(elementld,isSelected) {
             return {};
         }   
         
@@ -153,7 +161,7 @@
 
         // Function named onChildClicked
         function onChildClicked(e) {
-
+            return {};
         }
 
  
