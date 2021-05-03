@@ -106,7 +106,7 @@
 
             </div>
         </section>
-    </div>>
+    </div>
     <!-- Do Not Edit or Remove this footer element -->
     <footer class="do-not-remove container-fluid footer mx-auto  fb-targert sabio">
         <p class="text-center">© Sabio.la 2019</p>
@@ -117,51 +117,58 @@
 
         // Function named wireUpHandlers
         function wireUpHandlers() {
-            onAlphaClicked()
-            onChildClicked()
+            $('#alpha').on('click', onAlphaClicked);
+            $('#beta').on('click', onBetaClicked);
+            $('#gamma').on('click', onGammaClicked);
+            $('#cmdClick').on('click', onProfileSelected);
+            $('#cmdMouse').on('mouseover mouseout', onProfileSelected);
+            $('#cmdDoubleClick').on('dblclick', onProfileSelected);
+            $('#cmdCtrl').on('click', onProfileSelected);
+            $('#members-container').on('click', '.item', onChildClicked);
         }
 
         function startUp() {
-
+            wireUpHandlers()
         }
 
         // Function name onAlphaClicked
         function onAlphaClicked(e) {
-            $('btn').on('click', function() {
-                console.log('alpha')
-            });
+            console.log('alpha')
+            e.preventDefault()
         };
-
-
-
-        // $('button #alpha').on('click', )
-        // $('#alpha').click(function (e)
 
         // Function named onBetaClicked
         function onBetaClicked(e) {
-            e.preventDefault()
             console.log('beta')
+            e.preventDefault()
         }
 
         // Function named onGammaClicked
         function onGammaClicked(e) {
-                e.preventDefault()
-                console.log('gama')
-            }
+            console.log('gama')
+            e.preventDefault()
+        }
 
         // Function named showMessage
-        function showMessage(elementld,isSelected) {
-            return {};
+        function showMessage(elementId,isSelected) {
+            $('#msg').html(elementId + " selected = " + isSelected);
         }   
         
         // Function named onProfileSelected
         function onProfileSelected(e) {
-            return {};
+            if(e.currentTarget.id === 'cmdCtrl') {
+                console.log(e.ctrlKey);
+                e.ctrlKey && $(this).closest('.card').toggleClass('isSelected');
+            } else {
+                $(this).closest('.card').toggleClass('isSelected');
+            }
+            var isThisSelected = $(this).closest('.card').hasClass('isSelected');
+            showMessage(e.currentTarget.id, isThisSelected)
         }
 
         // Function named onChildClicked
         function onChildClicked(e) {
-            return {};
+            $('#childNotifications').text(`${e.currentTarget.tagName} was last clicked`)
         }
 
  
