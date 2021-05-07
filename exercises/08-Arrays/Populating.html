@@ -69,46 +69,41 @@
         }
     ]}
 
-    // function addPerson(id, first, last, email, gender, avatar) {
-    //     this.firstName = first;
-    //     this.lastName = last;
-    //     this.email = email;
-    //     this.gender = gender;
-    //     this.avatar = avatar;
-    // }
 
     // var myFriend = new Person(4, "Bool", "Dozer", "booldozer@email.com", "male", "https://i.imgur.com/UYsfCNO.png");
-    // getNewTeam.push({ id: 4, firstName: "Bool", lastName: "Dozer", email: "booldozer@email.com", gender: 'male', avatar: 'https://i.imgur.com/UYsfCNO.png' })
+    // getNewTeam().push({ id: 4, firstName: "Bool", lastName: "Dozer", email: "booldozer@email.com", gender: 'male', avatar: 'https://i.imgur.com/UYsfCNO.png' })
     
 
     var addPerson = function (anArray) {
-        return {};
+        const teamMember = { id: 4, firstName: "Bool", lastName: "Dozer", email: "booldozer@email.com", gender: 'male', avatar: 'https://i.imgur.com/UYsfCNO.png' }
+        anArray.push(teamMember);
+    }
+
+    function testAddPerson(){
+        var emptyArr = [];
+        addPerson(emptyArr)
+        console.log(emptyArr);
     }
 
     var removePerson = function (indexOfPerson, anArray) {
-            return {};
+            return anArray.splice(indexOfPerson, 1);
         }
 
     var logNames = function(anArray) {
-        // console.log(getNewTeam.firstName)
+        for(let i = 0; i < anArray.length; i++) {
+            console.log(anArray[i].firstName);
+        }
     }   
     
     var findSabio = function(people) {
-        return [
-            {
-                firstName: "Richard",
-                lastName: 'Sabio'
-            },
-            {
-                firstName: 'Andrew',
-                lastName: 'Sabio'
-            },
-            {
-                firstName: 'Tom',
-                lastName: 'Sabio'
-            }    
-        ];
+        let sabios = [];
+        for(i in people) {
+            if(people[i].lastName === "Sabio") {
+                sabios.push(people[i])
+            }   
         }
+        return sabios;
+    }
 
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
