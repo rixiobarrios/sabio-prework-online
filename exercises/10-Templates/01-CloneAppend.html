@@ -77,6 +77,38 @@
 
     <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
     <script id="candidateCode">
+
+        function startUp() {
+            wireUpButtons()
+        }
+
+        function wireUpButtons() {
+            $(".clone-1").on("click", onCloneTemplateOne);
+            $(".clone-2").on("click", onCloneTemplateTwo); 
+            $(".clone-3").on("click", onCloneTemplateThree);
+            $(".clear").on("click", onClearClicked);
+            $(".clone-change").on("click", copyClone);
+        }
+
+        function onCloneTemplateOne() {
+            var templateHtml = $("#templateOne").html();
+            var clone = $(templateHtml).clone();
+            $(".clone-container").append(clone);
+        }
+
+        function getTemplate() {
+            return {};
+        }
+
+        function addCloneToDom(){
+            return {};
+        }
+
+        function changeCloneContent(){
+            return {};
+        }
+
+
     </script>
 
     <!-- 🛑 Do Not Write Any Code Below here -->
