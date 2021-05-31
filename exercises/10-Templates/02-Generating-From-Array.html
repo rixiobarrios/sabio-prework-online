@@ -58,6 +58,24 @@
 
     <!--👇🏻 All your JavaScript code goes below here inside this script tag 👇🏻 -->
     <script id="candidateCode">
+
+        function getTemplate() {
+            return $($("#templateThree").html()).clone()
+        }
+
+        function renderTeamMember(teamMember) {
+            var clone = getTemplate()
+
+            clone.find(".card-img-top").attr("src", teamMember.avatar);
+            clone.find(".card-text").text(teamMember.id);
+            $("div.clone-container").append(clone)
+        }
+
+        // function renderTeam(team) {
+        //     return {};
+        // }
+
+
     </script>
     <!-- 🛑 Do Not Write Any Code Below here -->
 </body>
