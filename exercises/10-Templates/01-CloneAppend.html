@@ -64,6 +64,8 @@
                     <div class="row  my-3"><button type="button" class="btn btn-primary clone-1">Clone 1</button></div>
                     <div class="row  my-3"><button type="button" class="btn btn-primary clone-2">Clone 2</button></div>
                     <div class="row  my-3"><button type="button" class="btn btn-primary clone-3">Clone 3</button></div>
+                    <div class="row  my-3"><button type="button" class="btn btn-primary clear">Clear</button></div>
+                    <div class="row  my-3"><button type="button" class="btn btn-primary clone-change">Clone & Change</button></div>
                 </div>
             <div class="col-md-5 clone-container"></div>
 
@@ -94,18 +96,43 @@
             var templateHtml = $("#templateOne").html();
             var clone = $(templateHtml).clone();
             $(".clone-container").append(clone);
+            // cloneAndAppendById('#templateOne')
+        }
+
+        function onCloneTemplateTwo() {
+            var templateHtml = $("#templateTwo").html();
+            var clone = $(templateHtml).clone();
+            $(".clone-container").append(clone);
+        }
+
+        function onCloneTemplateThree() {
+            var templateHtml = $("#templateThree").html();
+            var clone = $(templateHtml).clone();
+            $(".clone-container").append(clone);
         }
 
         function getTemplate() {
-            return {};
+            return $($("#templateThree").html()).clone()
         }
 
-        function addCloneToDom(){
-            return {};
+        function addCloneToDom(jqClone){
+            $(".clone-container").append(jqClone);
         }
 
-        function changeCloneContent(){
-            return {};
+        var copyClone = function() {
+            var newClone = getTemplate();
+            changeCloneContent(newClone);
+            addCloneToDom(newClone);
+        }
+
+        function onClearClicked() {
+            $(".clone-container").empty();
+        }
+
+        function changeCloneContent(jqClone){
+            jqClone.find(".card-title").html("New Content");
+            jqClone.find(".card-text").html("New Content");
+            jqClone.find("img").attr("src", "https://i.pravatar.cc/440?img=47");
         }
 
 
